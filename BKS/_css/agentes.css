@@ -1,0 +1,34 @@
+.fotos {
+  border-radius: 12px;
+  border: 1px solid black;
+  box-shadow: 5px 5px darkgrey;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.p2 {
+  color: black;
+  margin-bottom: 5px;
+}
+
+.contato {
+  font-family: 'Anton', sans-serif;
+}
+
+.site {
+  font-family: 'Cinzel', serif;
+}
+
+@media screen and (max-width: 450px){
+  .LogoClientes {
+    font-size: 100%;
+    font-weight: bolder;
+  }
+}
+
+@media screen and (min-width: 451px) and (max-width: 1000px) {
+  .col-md-2 {
+    width: 28%;
+    height: 50%;
+  }
+}

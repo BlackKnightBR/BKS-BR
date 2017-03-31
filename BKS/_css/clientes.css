@@ -1,0 +1,35 @@
+.logos {
+  border-radius: 12px;
+  border: 1px solid black;
+  box-shadow: 5px 5px darkgrey;
+}
+
+.p2 {
+  color: black;
+}
+
+@media screen and (max-width: 450px){
+  .LogoClientes {
+    font-size: 100%;
+    font-weight: bolder;
+  }
+
+  .logos {
+    width: 48%;
+    height: 60%;
+  }
+}
+
+@media screen and (min-width: 451px) and (max-width: 1000px) {
+  .col-md-2 {
+    width: 28%;
+    height: 50%;
+  }
+}
+
+@media screen and (min-width: 1001px;) {
+  .logos {
+    width:90%;
+    height: 100%;
+  }
+}

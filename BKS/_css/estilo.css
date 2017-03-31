@@ -1,0 +1,125 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Aref+Ruqaa|Anton|Cinzel|Yanon+Kaffeesatz);
+
+body {
+  background-color: black;
+  margin: 2%;
+}
+
+img, embed, object, video {
+  max-width: 100%;
+}
+
+img {
+  transition: 0.5s;
+}
+
+
+/*-----Formatação das colunas e linhas------*/
+
+.row {
+  padding: 3%;
+  margin: 2px;
+  border: 2px solid white;
+  box-shadow: 5px 5px 3px darkgrey;
+  background-color:lightgrey;
+  border-radius: 18px;
+}
+
+.container {
+  color: darkblue;
+}
+
+/*-----Fim formatação das colunas e linhas------*/
+
+/*-----Formatação do cabeçalho-----*/
+
+.cabecalho {
+  background-color: white;
+  border: none;
+}
+
+.tituloBks {
+  font-family: 'Cinzel', serif;
+}
+
+.subtituloBks {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.subtituloLema {
+  font-family: 'Anton', sans-serif;
+}
+
+#icone {
+  position: relative;
+  float: right;
+  cursor:help;
+}
+
+#menu {
+  position:static;
+}
+
+#barraNav {
+  background-color: black;
+}
+
+#barraNav li {
+  list-style: none;
+  display: inline-block;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+#barraNav li:hover {
+  background-color: blue;
+}
+
+#barraNav a{
+  color: #4400aa;
+  text-decoration:none;
+  /*font-family: 'Aref Ruqaa', serif;*/
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+#barraNav a:hover {
+    color: #ffffff;
+}
+
+/*-----Fim do cabeçalho-----*/
+
+/*-----Formatação do rodapé-----*/
+#rodape {
+  background-color: white;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+#rodape a {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+/*-----Fim do rodapé-----*/
+
+/*-----Media queries-----*/
+
+@media screen and (max-width: 800px) {
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #icone {
+    max-width: 40%;
+    max-height: 60%;
+  }
+}
+
+/*-----fend of media queries-----*/

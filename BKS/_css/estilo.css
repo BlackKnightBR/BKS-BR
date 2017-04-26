@@ -111,6 +111,14 @@ img {
   text-decoration: none;
 }
 
+.contacts {
+  border: 1px solid lightgrey;
+  padding: 6px;
+  border-radius: 12px;
+  box-shadow: 3px 3px grey;
+  margin-bottom: 15px;
+}
+
 /*-----Fim do rodapé-----*/
 
 /*-----Media queries-----*/

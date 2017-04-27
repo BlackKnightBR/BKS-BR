@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <title>Black Knight Studio BR</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="_css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" href="//normalize-css.google.code.com/svn/trunk/normalize.css">
+    <style>
+      #image-container {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+
+      <header>
+          <nav id="menu">
+                <ul id="barraNav">
+                  <li><a href="index.html"> Inicial </a></li>
+                  <li><a href="clientes.html"> Clientes </a></li>
+                  <li><a href="contato.html"> Contato </a></li>
+                  <li><a href="agentes.html"> Agentes </a></li>
+                  <li><a href="diversao.html"> Diversão </a></li>
+                </ul>
+          </nav>
+
+
+            <div class="row cabecalho">
+              <div class="col-md-8">
+                    <h1 class="tituloBks">Black Knight Studio BR</h1>
+                    <h2 class="subtituloBks">Marketing digital de alto rendimento.</h2>
+                    <h3 class="subtituloLema">Baseado em conteúdo de qualidade.</h3>
+              </div>
+
+              <div class="col-md-4">
+                <img id="icone" src="_imagens/LogoNovo.png" alt="Logo oficial Black Knight Studio BR" data-toggle="modal" data-target="#project1">
+              </div>
+            </div>
+      </header>
+
+    <hr>
+
+    <section class="container">
+      <div class ="row">
+        <div>
+          <input type="file" id="file" />
+        </div>
+        <div id="image-container">
+          <canvas style='width:500px; height:500px;'></canvas>
+          <div style="margin-left:5px;">
+            <span class="subtituloLema">Texto Superior:</span><br/>
+            <input id="topLineText" type="text"><br/>
+            <span class="subtituloLema">Texto Inferior:</span><br/>
+            <input id="bottomLineText" type="text"><br/>
+            <button class="subtituloLema" id="saveBtn">Salvar Meme</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <hr>
+
+    <footer id="rodape" class="text-center">
+        <p>Copyright &copy; 2014  ·  Black Knight Studio - BR</p>
+        <span class="contacts">
+        <a class="entypo-mail" href="mailto:blackknight@blackknightstudio.com.br"> · </a>
+        <a class="brandico-facebook-rect"  href="https://www.facebook.com/BlackKnightStudioBR" target="blank" > · </a>
+        <a class="brandico-twitter-bird"  href="https://twitter.com/BlackKnightStud" target="blank" > · </a>
+        <a class="brandico-instagram"  href="https://www.instagram.com/the_black_ks_studio/" target="blank" > · </a>
+        <a class="entypo-video"  href="https://www.youtube.com/channel/UCQ59S64awksE1PZslIjzLcQ" target="blank" ></a>
+        </span>
+    </footer>
+
+    <script type="text/javascript" src="_js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="_js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_js/helper.js"></script>
+    <script type="text/javascript" src="_js/builderP1.js"></script>
+    <script async>
+    function textChangeListener (evt) {
+      var id = evt.target.id;
+      var text = evt.target.value;
+
+      if (id == "topLineText") {
+        window.topLineText = text;
+      } else {
+        window.bottomLineText = text;
+      }
+
+      redrawMeme(window.imageSrc, window.topLineText, window.bottomLineText);
+    }
+
+    function redrawMeme(image, topLine, bottomLine) {
+      // Get Canvas2DContext
+      var canvas = document.querySelector('canvas');
+      var ctx = canvas.getContext("2d");
+      if (image != null)
+        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+      // Text attributes
+      ctx.font = '24pt Impact';
+      ctx.textAlign = 'center';
+      ctx.strokeStyle = 'black';
+      ctx.lineWidth = 3;
+      ctx.fillStyle = 'white';
+
+      if (topLine != null) {
+        ctx.fillText(topLine, canvas.width / 2, 40);
+        ctx.strokeText(topLine, canvas.width / 2, 40);
+      }
+
+      if (bottomLine != null) {
+        ctx.fillText(bottomLine, canvas.width / 2, canvas.height - 20);
+        ctx.strokeText(bottomLine, canvas.width / 2, canvas.height - 20);
+      }
+    }
+
+    function saveFile() {
+      window.open(document.querySelector('canvas').toDataURL());
+    }
+
+    function handleFileSelect(evt) {
+      var canvasWidth = 500;
+      var canvasHeight = 500;
+      var file = evt.target.files[0];
+
+
+
+      var reader = new FileReader();
+      reader.onload = function(fileObject) {
+        var data = fileObject.target.result;
+
+        // Create an image object
+        var image = new Image();
+        image.onload = function() {
+
+          window.imageSrc = this;
+          redrawMeme(window.imageSrc, null, null);
+        }
+
+        // Set image data to background image.
+        image.src = data;
+        console.log(fileObject.target.result);
+      };
+      reader.readAsDataURL(file)
+    }
+
+    window.topLineText = "";
+    window.bottomLineText = "";
+    var input1 = document.getElementById('topLineText');
+    var input2 = document.getElementById('bottomLineText');
+    input1.oninput = textChangeListener;
+    input2.oninput = textChangeListener;
+    document.getElementById('file').addEventListener('change', handleFileSelect, false);
+    document.querySelector('button').addEventListener('click', saveFile, false);
+  </script>
+  </body>
+
+  <!-- Modal -->
+  <!-- Modal logo bks-br -->
+      <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h4 class="modal-title" id="myModalLabel">BKS-BR</h4>
+                  </div>
+                  <div class="modal-body">
+                      <img class="img-responsive" src="_imagens/LogoNovo(1).png" alt="Logo mais a sigla BKS-BR.">
+                      A BKS-BR surgiu em 2013 como uma empresa de desenvolvimento
+                      de jogos, para construção de capital, começamos a trabalhar
+                      com sites e coaching digital, por meados de 2014 a BKS-BR já
+                      estava construindo um nome em torno do marketing
+                      digital(mesmo que sem intenção) a ideia de desenvolvimento
+                      para jogos acabou se tornando obsoleta e oficializamos em
+                      2015 nosso papel como agência de marketing digital. 2016
+                      foi um ano de muita construção e aprendizado, para afinar
+                      nossas bússolas, afinal estávamos navegando em águas
+                      desconhecidas. Nosso capitão, Rodrigo Montebello Saboya Brito,
+                       estudou ciência da computação na Universidade Federal de
+                       Alfenas, tem cursos nas áreas de marketing, marketing digital,
+                        inglês avançado, rh, pacote office, segurança do trabalho,
+                        ruby on rails, front-end developer, android, economia
+                        para pequenos negócios, administração, animação básica,
+                        telemarketing e musica. Hoje em dia nosso curso está
+                        traçado e as velas estão a todo pano! Seja bem vindo a BKS-BR!
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+</html>

@@ -1,42 +1,16 @@
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span class="titulo">%data%</span><hr>';
+//Creates the colums for index(P1).
+var HTMLcolumP11part1 = '<div class="col-md-3"><article ><h2 class="subtituloLema t1">%data%</h2>';
+var HTMLcolumP11part2 = '<p class="tituloBks p1">%data%</p></article></div>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLcolumP12part1 = '<div class="col-md-6"><article><h2 class="subtituloLema t1">%data%</h2>';
+var HTMLcolumP12part2 = '<p class="tituloBks p1">%data%</p></article></div>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLcolumP13part1 = '<div class="col-md-4"><article><h2 class="subtituloLema t1">%data%</h2>';
+var HTMLcolumP13part2 = '<p class="tituloBks p1">%data%</p></article></div>';
 
-var HTMLskillsStart = '<h3 id="skills-h3">Habilidades:</h3><ul id="skills" class="flex-column"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
-
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
-
-var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
-
-var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
-var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolURL = '<br><a class="url-text" href="%data%">Site</a>';
-
-var HTMLonlineStart = '<div class="online-entry"></div>';
-var HTMLonlineTitle = '<div><a href="#">%data%';
-var HTMLonlineSchool = ' - %data%</a></div>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><p><a href="%data%">Site</a></p>';
+//Creates the colums for Clientes page(P2).
+var HTMLrowP2part1 = '<div class="row"><div class="col-md-2"><img  class="logos" src="_imagens/%data%"';
+var HTMLrowP2part2 = ' alt="%data%"></div><div class="col-md-10"><article >';
+var HTMLrowP2part3 = '<h2 class="tituloBks LogoClientes"><a href="%data%" target="blank">';
+var HTMLrowP2part4 = '%data%</a></h2><p class="subtituloLema p2">';
+var HTMLrowP2part5 = '%data%</p></article></div></div>';

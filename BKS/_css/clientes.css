@@ -8,6 +8,10 @@
   color: black;
 }
 
+#botoes {
+  margin-left: 10%;
+}
+
 @media screen and (max-width: 450px){
   .LogoClientes {
     font-size: 100%;

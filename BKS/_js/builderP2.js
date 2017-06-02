@@ -48,6 +48,14 @@ var clientes = [
     "alt" : "Logo Maquinarium.",
     "img" : "LogoMaquinarium.png",
     "site" : ""
+  },
+  {
+    "nome" : "Casa de Carnes São Domingos.",
+    "facebook" : "https://www.facebook.com/maquinarium.tattoo/",
+    "description" : "Atuando há mais de vinte e cinco anos, a Casa de Carnes São Domingos sempre mantém um atendimento personalizado,contando com uma equipe de profissionais qualificados e com produtos de altíssima qualidade, oferecendo ao cliente o que há de melhor em carnes. Proporcionamos praticidade ao seu dia a dia, colocando à sua disposição carnes temperadas e assadas.",
+    "alt" : "Logo Casa de Carnes São Domingos.",
+    "img" : "CasaDeCarnes.png",
+    "site" : ""
   }
 ];
 

@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    perspective: 1000px;
+}
+
+section {
+  height: 100vh;
+  color: white;
+  scroll-snap-align: start;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+/** Cover settings **/
+
+.bar{
+    display: flex;
+    min-height: 50%;
+    max-height: 50%;
+    width: 100%;
+}
+
+.menu-top {
+    list-style: none;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.menu-top li {
+    margin: 0.3%;
+    padding: 0.1%;
+    border-radius: 5px;
+    text-align: center;
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.marble {
+    background-color: #1b1a1a;
+    background-image: url('../_imagens/Backgroundbar.png');
+}
+.black {
+    background-color: #1b1a1a;
+}
+
+.text-top {
+    margin-top:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
+
+.text-top header {
+    width: 100%;
+    background-image: linear-gradient(102deg, black, #1b1a1a);
+    opacity: 0.99;
+    border-radius: 12px;
+    padding: 1%;
+}
+
+
+.text-top h1{
+    font-family: 'Exo 2', sans-serif;
+    width: 100%;
+    font-size: 50px;
+}
+
+.text-top p{
+    font-family: 'Exo 2', sans-serif;
+    margin: 0.2rem 0 0.2rem 0.5rem;
+    font-size: 20px;
+}
+
+.text-top-bottom {
+    color: white;
+    margin: 5% 0 0 60%;
+    width: 70%;
+    border-radius: 12px;
+    background-image: linear-gradient(102deg, #1b1a1a, #666769);
+    padding: 2%;
+}
+
+.text-top-bottom p {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 21px;
+    margin-bottom: 3px;
+}
+
+
+.logo-top {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    height: 180px;
+    width: 180px;
+    z-index: 200;
+}
+
+.logo-top img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/** Middle1 settings **/
+
+.middle1 {
+    background-image: linear-gradient(102deg, #1b1a1a, #666769);
+    padding-top: 15%;
+}
+
+.card-middle {
+    background-color: #1b1a1a;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-middle img {
+    width: 20%;
+    height: 20%;
+}
+
+.card-middle p {
+    margin: 0 0 0 1%;
+    width: 60%;
+    height: 20%;
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+}
+
+.tecnologies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    margin-top: 1%;
+    color: black;
+    background-color: white;
+    border-radius: 3px;
+    padding: 1% 0 1% 0;
+}
+
+.tecnologies h1 {
+    margin-right: 3%;
+}
+
+/** Middle2 settings **/
+
+.middle2 {
+    background-color: white;
+}
+
+.containerMiddle2 {
+    margin-top: 8%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cardMiddle2 {
+    background-color: #1a1b1b;
+    transform-style: preserve-3d;
+    height: 90vh;
+    width: 30%;
+    border-radius: 30px;
+    padding: 1%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardMiddle21 {
+    background-color: #1a1b1b;
+    transform-style: preserve-3d;
+    height: 90vh;
+    width: 30%;
+    border-radius: 30px;
+    padding: 1%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardMiddle22 {
+    background-color: #1a1b1b;
+    transform-style: preserve-3d;
+    height: 90vh;
+    width: 30%;
+    border-radius: 30px;
+    padding: 1%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sneaker {
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sneaker img {
+    width: 6rem;
+    height: 6rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+
+.sneaker1 {
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sneaker1 img {
+    width: 6rem;
+    height: 6rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+
+.sneaker1 {
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sneaker1 img {
+    width: 6rem;
+    height: 6rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+
+.sneaker2 {
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sneaker2 img {
+    width: 6rem;
+    height: 6rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+
+.circle {
+    width: 8rem;
+    height: 8rem;
+    background: linear-gradient(
+        to right,
+        rgba(245, 70, 66, 0.75),
+        rgba(8, 83, 156, 0.75)
+        );
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.info h1{
+    z-index: 3;
+    font-size: 3rem;
+    transition: all 0.75s ease-out;
+}
+
+.info h3{
+    font-size: 1.3rem;
+    padding: 2rem 0rem;
+    color: #585858;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+}
+
+button:hover {
+    background: #585858;
+    color: white;
+}
+
+.purchase {
+    margin-top: 5rem;
+}
+
+.purchase button {
+    width: 30%;
+    padding: 1rem 0rem;
+    background: #f54642;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+    transition: all 0.75s ease-out;
+}
+
+.purchase1 {
+    margin-top: 5rem;
+}
+
+.purchase1 button {
+    width: 30%;
+    padding: 1rem 0rem;
+    background: #f54642;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+    transition: all 0.75s ease-out;
+}
+
+.purchase2 {
+    margin-top: 5rem;
+}
+
+.purchase2 button {
+    width: 30%;
+    padding: 1rem 0rem;
+    background: #f54642;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+    transition: all 0.75s ease-out;
+}
+
+/** Bottom settings **/
+
+.bottom {
+    background-image: linear-gradient(102deg, #1b1a1a, #666769);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textBottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentBottom {
+    width: 50%;
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+}

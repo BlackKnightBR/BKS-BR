@@ -36,7 +36,7 @@ section {
 }
 
 .menu-top li {
-    margin: 0.3%;
+    margin: 0.5%;
     padding: 0.1%;
     border-radius: 5px;
     text-align: center;
@@ -271,26 +271,30 @@ section {
     height: 8rem;
     background: linear-gradient(
         to right,
-        rgba(245, 70, 66, 0.75),
+        white,
         rgba(8, 83, 156, 0.75)
         );
     position: absolute;
     border-radius: 50%;
     z-index: 1;
+    padding: 3.9%;
+    opacity: 0.8;
 }
 
 .info h1{
     z-index: 3;
-    font-size: 3rem;
+    font-size: 2.5rem;
     transition: all 0.75s ease-out;
+    font-family: 'Exo 2', sans-serif;
 }
 
 .info h3{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding: 2rem 0rem;
-    color: #585858;
+    color: white;
     font-weight: lighter;
     transition: all 0.75s ease-out;
+    font-family: "Poppins", sans-serif;
 }
 
 button:hover {
@@ -307,11 +311,17 @@ button:hover {
     padding: 1rem 0rem;
     background: #f54642;
     border: none;
-    color: white;
+    color: black;
     cursor: pointer;
     border-radius: 30px;
     font-weight: bolder;
     transition: all 0.75s ease-out;
+    background: linear-gradient(
+        to right,
+        white,
+        rgba(8, 83, 156, 0.75)
+        );
+    font-family: "Poppins", sans-serif;
 }
 
 .purchase1 {
@@ -323,11 +333,17 @@ button:hover {
     padding: 1rem 0rem;
     background: #f54642;
     border: none;
-    color: white;
+    color: black;
     cursor: pointer;
     border-radius: 30px;
     font-weight: bolder;
     transition: all 0.75s ease-out;
+    background: linear-gradient(
+        to right,
+        white,
+        rgba(8, 83, 156, 0.75)
+        );
+    font-family: "Poppins", sans-serif;
 }
 
 .purchase2 {
@@ -339,11 +355,17 @@ button:hover {
     padding: 1rem 0rem;
     background: #f54642;
     border: none;
-    color: white;
+    color: black;
     cursor: pointer;
     border-radius: 30px;
     font-weight: bolder;
     transition: all 0.75s ease-out;
+    background: linear-gradient(
+        to right,
+        white,
+        rgba(8, 83, 156, 0.75)
+        );
+    font-family: "Poppins", sans-serif;
 }
 
 /** Bottom settings **/
@@ -366,4 +388,97 @@ button:hover {
     width: 50%;
     font-size: 40px;
     font-family: 'Dancing Script', cursive;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .logo-top {
+      width: 80px;
+      height: 80px;
+  }
+
+  .menu-top p {
+      visibility: hidden;
+  }
+
+  .menu-top li {
+      width: 50%;
+      height: 40px;
+      margin-top: 10px;
+      padding-top: 9px;
+  }
+
+  .text-top {
+      width: 100%;
+      padding-left: 3px;
+  }
+
+  .text-top h1{
+      font-size: 10vw;
+  }
+
+  .text-top-bottom {
+      width: 100%;
+      margin: 5% 0 0 0;
+  }
+
+ .card-middle img {
+     visibility: hidden;
+ }
+
+ .card-middle p {
+     width: 100%;
+     margin: 0;
+     margin-right: 10%;
+     font-size: 4vw;
+     text-align: left;
+ }
+
+ .tecnologies {
+     width: 100%;
+ }
+
+ .tecnologies h1 {
+     font-size: 2.5vw;
+     margin-left: 10px;
+ }
+
+ .middle2 {
+     height: 1830px;
+ }
+
+ .containerMiddle2 {
+     display: block;
+     height: 100%;
+ }
+
+ .cardMiddle2 {
+     width: 100%;
+     height: 600px;
+     margin-top: 10px;
+ }
+
+ .cardMiddle21 {
+     width: 100%;
+     height: 600px;
+     margin-top: 10px;
+ }
+
+ .cardMiddle22 {
+     width: 100%;
+     height: 600px;
+     margin-top: 10px;
+ }
+
+ .contentBottom {
+     font-size: 20px;
+ }
+}
+
+@media screen and (max-width: 991px) {
+
 }

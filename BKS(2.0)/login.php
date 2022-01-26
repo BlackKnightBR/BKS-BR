@@ -7,6 +7,9 @@
     <link type="text/css" rel="stylesheet" href="_css/estilo.css">
 </head>
 <body>
-
+    <form>
+    </form>
+    <footer id='footer'>
+    </footer
 </body>
 </html>
